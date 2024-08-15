@@ -1,0 +1,49 @@
+// api_spec.json
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Interdimensional Communication API",
+    "version": "1.0.0",
+    "description": "INTERDIMENSIONAL COMMUNICATION API!!!!!!!!!"
+  },
+  "paths": {
+    "/send": {
+      "post": {
+        "summary": "Send a message",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NeutrinoGravitationalWaveMessage"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Message sent successfully"
+          }
+        }
+      }
+    },
+    // ... other endpoints
+  },
+  "components": {
+    "schemas": {
+      "NeutrinoGravitationalWaveMessage": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["neutrino", "gravitational_wave"]
+          },
+          "data": {
+            "type": "string",
+            "format": "base64"
+          },
+          // ... other properties
+        }
+      }
+    }
+  }
+}
