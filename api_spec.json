@@ -71,8 +71,7 @@
             "type": "string",
             "format": "base64"
           },
-          // ... other properties
-        }
+                 }
       }
     }
   }
