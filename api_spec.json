@@ -1,4 +1,3 @@
-// api_spec.json
 {
   "openapi": "3.0.1",
   "info": {
@@ -22,12 +21,43 @@
         "responses": {
           "200": {
             "description": "Message sent successfully"
+                     },
+          "400": {
+            "description": "Invalid request"
+          },
+          "500": {
+            "description": "Internal server error"
           }
         }
       }
     },
-    // ... other endpoints
-  },
+    "/receive": {
+      "get": {
+        "summary": "Retrieve incoming messages",
+        "responses": {
+          "200": {
+            "description": "List of messages",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InterdimensionalMessage"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  }, 
   "components": {
     "schemas": {
       "NeutrinoGravitationalWaveMessage": {
