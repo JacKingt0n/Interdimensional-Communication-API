@@ -21,7 +21,7 @@
         "responses": {
           "200": {
             "description": "Message sent successfully"
-                     },
+          },
           "400": {
             "description": "Invalid request"
           },
@@ -57,7 +57,7 @@
         }
       }
     }
-  }, 
+  },
   "components": {
     "schemas": {
       "NeutrinoGravitationalWaveMessage": {
@@ -70,8 +70,26 @@
           "data": {
             "type": "string",
             "format": "base64"
+          }
+        }
+      },
+      "InterdimensionalMessage": {
+        "type": "object",
+        "properties": {
+          "sender": {
+            "type": "string"
           },
-                 }
+          "receiver": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "data": {
+            "type": "string"
+          }
+        }
       }
     }
   }
